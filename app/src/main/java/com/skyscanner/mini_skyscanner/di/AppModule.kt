@@ -1,6 +1,5 @@
 package com.skyscanner.mini_skyscanner.di
 
-import com.skyscanner.mini_skyscanner.network.NetworkInterceptor
 import com.skyscanner.mini_skyscanner.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -42,7 +41,6 @@ class AppModule {
             builder.addInterceptor(interceptor)
                 .connectTimeout(20, TimeUnit.SECONDS)
                 .readTimeout(20, TimeUnit.SECONDS)
-                .addInterceptor(NetworkInterceptor())
             return builder.build()
         }
     }
