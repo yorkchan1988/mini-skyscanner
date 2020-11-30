@@ -59,7 +59,7 @@ class FlightsRecyclerAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>()
             binding.tvPrice.text = itinerary.price
             binding.tvAgent.text = "via %s".format(itinerary.agent)
             binding.llContainer.removeAllViews()
-            itinerary.legs.forEach {
+            itinerary.legs?.forEach {
                 addLegs(it, binding.llContainer)
             }
         }

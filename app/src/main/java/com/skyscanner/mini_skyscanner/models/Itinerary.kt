@@ -17,5 +17,5 @@ data class Itinerary(
     @Expose
     var agent: String,
     @Expose(serialize = false, deserialize = false)
-    var legs: List<Leg?> = listOf()
+    var legs: List<Leg?>? = listOf()
 )
