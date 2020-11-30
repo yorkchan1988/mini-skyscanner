@@ -8,9 +8,10 @@ import com.skyscanner.mini_skyscanner.R
 import com.skyscanner.mini_skyscanner.databinding.ActivityMainBinding
 import com.skyscanner.mini_skyscanner.ui.MainViewModel
 import com.skyscanner.mini_skyscanner.viewmodels.ViewModelProviderFactory
+import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
 
     lateinit var viewModel: MainViewModel
 

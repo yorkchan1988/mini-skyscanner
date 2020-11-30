@@ -2,7 +2,6 @@ package com.skyscanner.mini_skyscanner.di
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey
-import kotlin.annotation.AnnotationTarget.*
 import kotlin.reflect.KClass
 
 @Retention(AnnotationRetention.RUNTIME)
