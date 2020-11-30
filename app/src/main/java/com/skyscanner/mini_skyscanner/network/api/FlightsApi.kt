@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface FlightsApi {
 
     @GET("/skyscanner-prod-takehome-test/flights.json")
-    fun getInvestorProduct(): Observable<FlightsApiResponse>
+    fun getFlights(): Observable<FlightsApiResponse>
 }

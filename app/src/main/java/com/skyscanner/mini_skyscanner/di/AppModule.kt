@@ -1,5 +1,7 @@
 package com.skyscanner.mini_skyscanner.di
 
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.skyscanner.mini_skyscanner.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -22,11 +24,13 @@ class AppModule {
         @Provides
         fun provideRetrofitInstance(client: OkHttpClient): Retrofit {
 
+            val gson: Gson = GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()
+
             return Retrofit.Builder()
                 .baseUrl(Constants.BASE_URL)
                 .client(client)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
         }
 

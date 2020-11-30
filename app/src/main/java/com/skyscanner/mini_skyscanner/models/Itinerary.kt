@@ -9,11 +9,13 @@ data class Itinerary(
     var itId: String,
     @SerializedName("legs")
     @Expose
-    var legs: List<String>,
+    var legIds: List<String>,
     @SerializedName("price")
     @Expose
     var price: String,
     @SerializedName("agent")
     @Expose
-    var agent: String
+    var agent: String,
+    @Expose(serialize = false, deserialize = false)
+    var legs: List<Leg?> = listOf()
 )

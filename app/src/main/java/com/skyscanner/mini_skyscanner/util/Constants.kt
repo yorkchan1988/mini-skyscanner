@@ -4,6 +4,6 @@ class Constants {
     companion object {
 
         // API URL
-        const val BASE_URL: String = " https://s3-eu-west-1.amazonaws.com"
+        const val BASE_URL: String = "https://s3-eu-west-1.amazonaws.com"
     }
 }
